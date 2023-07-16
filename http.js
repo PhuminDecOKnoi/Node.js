@@ -11,6 +11,9 @@ conn.connect(function(err){
     if(err) throw err;
     console.log("Connected!");
 });
+/*
+    การใช้งาน Libralies : url, http, mysql ร่วมกัน
+*/
 http.createServer(function(req ,res){
     res.writeHead(200, {"Content-Type":"text/html;charset=utf-8"});
     const sql = "SELECT * FROM `tb_test`";
