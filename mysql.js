@@ -7,11 +7,13 @@ var conn = mysql.createConnection({
     password: "",
     database: "test"
 });
+// Connect with mySQL Database
 conn.connect(function(err){
     if(err) throw err;
     console.log("Connected!");
 
 });    
+// query SQL [mySQL] via Node.js
     var sql = "SELECT * FROM `tb_test`";
     conn.query(sql ,function(err ,result,fields){
        if(err) throw err;
