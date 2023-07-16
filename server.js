@@ -1,12 +1,13 @@
 var http = require('http');
-var url = require('url');
-var mysql = require('mysql');
+var url = require('url'); 
+var mysql = require('mysql'); // mySQL Requirement
 
 var conn = mysql.createConnection({
         host: "localhost",
         user: "root",
         password: ""
 });
+// Connect mySQL Database
 conn.connect(function(err){
     if(err) throw err;
        console.log('Connected!');
