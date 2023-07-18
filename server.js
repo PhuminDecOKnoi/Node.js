@@ -26,6 +26,6 @@ conn.connect(function(err){
         res.write("Result:" + result);
         res.end();
 
-        }).listen(8888);
+        }).listen(3000);
     });
 });
