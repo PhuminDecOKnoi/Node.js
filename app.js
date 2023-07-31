@@ -1,19 +1,11 @@
-const myModule = require('./modules')
-console.log(myModule.myHelloworld)
-
-const Connection = require('mysql/lib/Connection')
-const myHost = 'localhost'
-const myUser = 'root'
-const myPassword = ''
-const myDB = ''
-
-const mysql = require('mysql')
-const conn = mysql.createConnection({
-    host : mysql,
-    user : myUser,
-    password : myPassword,
-    database : myDB
-})
-conn.connect(function(err){
-    if(err) throw('Connected')
-})
+var mysql = require('mysql');
+var myModule = require('./modules');
+var conn = myModule.connMySQL(); //Connected to MySQL
+var sql = "SELECT * FROM `tb_test`";
+conn.query(sql, function (err, result, fields) {
+    if (err)
+        throw err;
+    console.log(result[0]);
+    console.log(result[1]);
+    console.log(result[2]);
+});
