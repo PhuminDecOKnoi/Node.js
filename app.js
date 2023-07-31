@@ -1,7 +1,7 @@
-const Connection = require('mysql/lib/Connection')
 const myModule = require('./modules')
-console.log(myModule.myHelloworld())
+console.log(myModule.myHelloworld)
 
+const Connection = require('mysql/lib/Connection')
 const myHost = 'localhost'
 const myUser = 'root'
 const myPassword = ''
